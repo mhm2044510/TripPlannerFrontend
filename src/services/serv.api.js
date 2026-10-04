@@ -1,5 +1,5 @@
 import axios from "axios";
-const api = axios.create({ baseURL: "https://tripplanner-gm2n.onrender.com" });
+const api = axios.create({ baseURL: import.meta.env.VITE_API_URL });
 export async function getCities() {
   const res = await api.get("/api/trips/cities/");
   return res.data;
